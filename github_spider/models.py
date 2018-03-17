@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, DateTime
 
-engine = create_engine('mysql+mysqldb://root:root@localhost:3306/shiyanlougithub?charset=utf8')
+engine = create_engine('mysql+mysqldb://root:root@localhost:3306/github?charset=utf8')
 Base = declarative_base()
 
 

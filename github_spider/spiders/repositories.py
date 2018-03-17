@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from shiyanlou_github_spider.items import RepositoryItem
+from github_spider.items import RepositoryItem
 
 
 class RepositoriesSpider(scrapy.Spider):
@@ -8,7 +8,7 @@ class RepositoriesSpider(scrapy.Spider):
 
     @property
     def start_urls(self):
-        url_tmp = 'https://github.com/shiyanlou?page={}&tab=repositories'
+        url_tmp = 'https://github.com/phoenixlzx?page={}&tab=repositories'
         return (url_tmp.format(i) for i in range(1, 5))
 
     def parse(self, response):

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for shiyanlou_github_spider project
+# Scrapy settings for github_spider project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'shiyanlou_github_spider'
+BOT_NAME = 'github_spider'
 
-SPIDER_MODULES = ['shiyanlou_github_spider.spiders']
-NEWSPIDER_MODULE = 'shiyanlou_github_spider.spiders'
+SPIDER_MODULES = ['github_spider.spiders']
+NEWSPIDER_MODULE = 'github_spider.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'shiyanlou_github_spider (+http://www.yourdomain.com)'
+#USER_AGENT = 'github_spider (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'shiyanlou_github_spider.middlewares.ShiyanlouGithubSpiderSpiderMiddleware': 543,
+#    'github_spider.middlewares.GithubSpiderSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'shiyanlou_github_spider.middlewares.ShiyanlouGithubSpiderDownloaderMiddleware': 543,
+#    'github_spider.middlewares.GithubSpiderDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'shiyanlou_github_spider.pipelines.ShiyanlouGithubSpiderPipeline': 300,
+   'github_spider.pipelines.GithubSpiderPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

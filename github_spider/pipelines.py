@@ -6,11 +6,11 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 from sqlalchemy.orm import sessionmaker
-from shiyanlou_github_spider.models import engine, Repository
+from github_spider.models import engine, Repository
 from datetime import datetime
 
 
-class ShiyanlouGithubSpiderPipeline(object):
+class GithubSpiderPipeline(object):
     def process_item(self, item, spider):
         item['update_time'] = datetime.strptime(item['update_time'], '%Y-%m-%dT%H:%M:%SZ').date()
 
