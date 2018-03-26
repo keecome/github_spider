@@ -9,7 +9,7 @@ class RepositoriesSpider(scrapy.Spider):
     @property
     def start_urls(self):
         url_tmp = 'https://github.com/phoenixlzx?page={}&tab=repositories'
-        return (url_tmp.format(i) for i in range(1, 5))
+        return (url_tmp.format(i) for i in range(1, 4))
 
     def parse(self, response):
         for repository in response.xpath('.//div[@id="user-repositories-list"]/ul/li'):
